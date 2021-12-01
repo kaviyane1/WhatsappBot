@@ -29,7 +29,7 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `👾 *Kaoi's Command List* 👾\n\n`
+            let text = `🔰 *KN BOT command List* 🔰 \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
                 text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
@@ -38,7 +38,7 @@ export default class Command extends BaseCommand {
                     .map((command) => command.config?.command)
                     .join(', ')}\`\`\`\n\n`
             return void M.reply(
-                `${text} 🗃️ *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`
+                `${text} 📃 *සටහන: ඔබට විධාන ක්‍රියාකරන ආකාරය දැන ගැනීමට පහත පියවර අනුගමනය කරන්න උදාහරණයක් ලෙස ${this.client.config.prefix}help <අවශ්‍ය විධානය> යෙදීමෙන් ක්‍රියාකාරිත්වය පිළිබඳ අවබෝධයක් ගත හැක*`
             )
         }
         const key = parsedArgs.joined.toLowerCase()
